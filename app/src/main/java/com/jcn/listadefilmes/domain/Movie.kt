@@ -1,4 +1,4 @@
-package com.jcn.listadefilmes.model
+package com.jcn.listadefilmes.domain
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

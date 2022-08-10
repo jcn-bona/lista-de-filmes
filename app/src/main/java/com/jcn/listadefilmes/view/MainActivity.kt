@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.jcn.listadefilmes.R
-import com.jcn.listadefilmes.model.Movie
-import com.jcn.listadefilmes.viewmodel.MovieListViewModel
+import com.jcn.listadefilmes.domain.Movie
+import com.jcn.listadefilmes.framework.viewmodel.MovieListViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

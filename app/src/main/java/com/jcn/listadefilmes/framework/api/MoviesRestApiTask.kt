@@ -1,4 +1,4 @@
-package com.jcn.listadefilmes.api
+package com.jcn.listadefilmes.framework.api
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

@@ -1,6 +1,6 @@
-package com.jcn.listadefilmes.api
+package com.jcn.listadefilmes.framework.api
 
-import com.jcn.listadefilmes.model.Movie
+import com.jcn.listadefilmes.domain.Movie
 import retrofit2.Call
 import retrofit2.http.GET
 
