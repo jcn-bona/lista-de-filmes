@@ -2,6 +2,7 @@ package com.jcn.listadefilmes.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.jcn.listadefilmes.R
 import com.jcn.listadefilmes.model.Movie
@@ -23,15 +24,21 @@ class MainActivity : AppCompatActivity() {
 
     private fun initObserver() {
         movieListViewModel.moviesList.observe(this) { list ->
-            populateList(list)
+            if (list.isNotEmpty()) {
+                populateList(list)
+                loadingVisibility(false)
+            }
         }
-
     }
 
     private fun populateList(list: List<Movie>) {
-        moviesList.apply {
+        movies_list.apply {
             hasFixedSize()
             adapter = MoviesAdapter(list)
         }
+    }
+
+    private fun loadingVisibility(isLoading: Boolean) {
+        progress_bar.visibility = if (isLoading) View.VISIBLE else View.GONE
     }
 }

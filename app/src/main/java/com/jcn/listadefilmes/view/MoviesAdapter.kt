@@ -17,8 +17,8 @@ class MoviesAdapter(private val moviesList: List<Movie>): RecyclerView.Adapter<M
 
     override fun onBindViewHolder(holder: MoviesViewHolder, position: Int) {
         holder.itemView.apply {
-            movieTitle.text = moviesList[position].titulo
-            movieImage.load(moviesList[position].imagem) {
+            movie_title.text = moviesList[position].titulo
+            movie_image.load(moviesList[position].imagem) {
                 placeholder(R.drawable.ic_image)
                 fallback(R.drawable.ic_image)
             }
